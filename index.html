@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search & Find a word</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Search & Find</h1>
+      <div class="input-box">
+        <input
+          type="text"
+          id="input-search"
+          placeholder="Enter your desire word or letter to find"
+          autocapitalize="off"
+          autocomplete="off"
+          spellcheck="false"
+          required
+        />
+        <button id="check-btn">Find</button>
+      </div>
+      <div class="count-box">
+        <span id="match-count">Match Found : 0</span>
+        <span id="word-count">Total Characters: 0</span>
+      </div>
+      <form id="text-io">
+        <!-- Contenteditable div instead of textarea -->
+        <div
+          name="message-box"
+          id="message-box"
+          spellcheck="false"
+          contenteditable="true"
+        ></div>
+        <span id="error-mssg">No Match Found</span>
+        <div class="utility-box">
+          <label for="caseSensitiveBtn" id="caseSensitiveBtnDiv">
+            <input type="checkbox" id="caseSensitiveBtn" />
+            <span>Case Sensitive</span>
+          </label>
+          <label for="caseSensitiveBtn" id="highlithColorDiv">
+            <span>Highlighter Color</span>
+            <input type="color" id="highlithColorBtn" value="#9a35cc" />
+          </label>
+        </div>
+        <div class="btn-box">
+          <button id="demo-genarate-btn">Generate Demo Text</button>
+          <button id="clear-btn">Clear</button>
+        </div>
+      </form>
+      <div id="copuRight">&copy;Abdur Rahman Adil</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
