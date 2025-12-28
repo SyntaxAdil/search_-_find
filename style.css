@@ -4,31 +4,29 @@
   outline: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
-
 .container {
-  min-width: 380px;
-  width: 380px;
+  min-width: 500px;
+  width: 500px;
+  max-width: 100%;
   background: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 40px;
   border: 1px solid darkorchid;
   border-radius: 10px;
 }
-
 .title {
   text-align: center;
   color: darkorchid;
   margin-bottom: 1rem;
 }
-
 .input-box {
   width: 100%;
   margin-bottom: 0.5rem;
@@ -36,14 +34,12 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
-
 .input-box input {
   padding: 8px 10px;
   border: 1px solid darkorchid;
   border-radius: 4px;
   flex: 1;
 }
-
 .input-box button {
   padding: 8px 15px;
   background: darkorchid;
@@ -54,11 +50,9 @@ body {
   cursor: pointer;
   transition: 0.4s;
 }
-
 .input-box button:hover {
   filter: brightness(0.91);
 }
-
 .count-box {
   margin: 0.5rem 0;
   display: flex;
@@ -66,12 +60,10 @@ body {
   color: darkorchid;
   font-weight: 500;
 }
-
 #text-io {
   width: 100%;
   position: relative;
 }
-
 #message-box {
   width: 100%;
   min-height: 150px;
@@ -84,30 +76,24 @@ body {
   overflow-y: auto;
   margin-bottom: 0.5rem;
 }
-
 #message-box:focus {
   outline: none;
 }
-
 #message-box::-webkit-scrollbar {
   width: 10px;
 }
-
 #message-box::-webkit-scrollbar-track {
   background: #f0f0f0;
   border-radius: 4px;
 }
-
 #message-box::-webkit-scrollbar-thumb {
   background-color: darkorchid;
   border-radius: 4px;
   border: 2px solid #f0f0f0;
 }
-
 #message-box::-webkit-scrollbar-thumb:hover {
   cursor: grab;
 }
-
 #error-mssg {
   position: absolute;
   top: 0;
@@ -126,13 +112,11 @@ body {
   user-select: none;
   display: none;
 }
-
 .utility-box {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
-
 .utility-box label {
   display: flex;
   align-items: center;
@@ -142,7 +126,6 @@ body {
   user-select: none;
   font-weight: 450;
 }
-
 #highlithColorBtn {
   width: 40px;
   height: 30px;
@@ -150,13 +133,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .btn-box {
-  
   display: flex;
   gap: 10px;
 }
-
 .btn-box button {
   width: 100%;
   display: block;
@@ -171,11 +151,9 @@ body {
   cursor: pointer;
   transition: 0.4s;
 }
-
 .btn-box button:hover {
   filter: brightness(0.9);
 }
-
 .hightlightedText {
   background-color: darkorchid;
   color: #fff;
@@ -183,3 +161,89 @@ body {
 }
 .error { border: 1px solid red !important; }
 #copuRight { text-align: center; margin: 15px 0 0 0; font-size: 14px; color: #cacaca8e; user-select: none; }
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  .container {
+    min-width: 100%;
+    width: 100%;
+    padding: 25px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .count-box {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+  }
+  .utility-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-box {
+    flex-direction: column;
+  } #error-mssg{
+    min-height: 100px;
+    max-height: 150px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+  .input-box button {
+    width: 100%;
+  }
+  #message-box {
+    font-size: 0.95rem;
+  }
+  .count-box {
+    font-size: 0.85rem;
+  }
+  .utility-box label {
+    font-size: 0.9rem;
+  }
+  .btn-box button {
+    font-size: 0.85rem;
+  }
+  #copuRight {
+    font-size: 12px;
+  }
+    #error-mssg{
+    min-height: 80px;
+    max-height: 150px;
+
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 15px;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  #message-box {
+    min-height: 120px;
+    max-height: 120px;
+  }
+  #error-mssg{
+    min-height: 120px;
+    max-height: 120px;
+
+  }
+}
