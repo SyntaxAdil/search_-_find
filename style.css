@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-  min-width: 500px;
-  width: 500px;
+  min-width: 380px;
+  width: 380px;
   background: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 40px;
