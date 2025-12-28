@@ -57,6 +57,7 @@ clearTextBtn.addEventListener("click", (e) => {
   searchInput.value = "";
   messageBox.innerHTML = "";
   searchInput.classList.remove("error");
+  matchCount.textContent = "Match Found: 0";
   countWord(messageBox.innerText);
 });
 
